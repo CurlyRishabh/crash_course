@@ -9,7 +9,7 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv(SECRET_KEY)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'coolRishabh@12345')
 
 # MongoDB setup
 client = MongoClient(os.getenv('MONGODB_URI', 'mongodb://localhost:27017/'))
